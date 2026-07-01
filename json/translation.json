@@ -1,0 +1,124 @@
+{
+  "languages": [
+    "en",
+    "es"
+  ],
+  "translation": [
+    {
+      "en": "Welcome to REFORM Alliance's Virginia Early Termination Tool.",
+      "es": "Bienvenido a la Herramienta de Terminación Anticipada de Libertad Condicional de Virginia de REFORM Alliance."
+    },
+    {
+      "en": "This tool is designed to help users understand whether they may be eligible for early termination of probation in Virginia. It only applies to people on probation, not parole. Probation officers are responsible for recommending early termination. While this tool will help you understand whether you are eligible, you should speak with your probation officer directly about your specific case.",
+      "es": "Esta herramienta está diseñada para ayudar a los usuarios a entender si pueden ser elegibles para la terminación anticipada de la libertad condicional (probation) en Virginia. Solo aplica a personas en libertad condicional (probation), no en libertad condicional supervisada tras prisión (parole). Los oficiales de libertad condicional son responsables de recomendar la terminación anticipada. Si bien esta herramienta le ayudará a entender si es elegible, debe hablar directamente con su oficial de libertad condicional sobre su caso específico."
+    },
+    {
+      "en": "This tool can be used by anyone, but is specifically designed to be used by people on probation. To begin using the tool, please click on the START button below.",
+      "es": "Esta herramienta puede ser utilizada por cualquier persona, pero está diseñada específicamente para personas en libertad condicional. Para comenzar a usar la herramienta, haga clic en el botón COMENZAR a continuación."
+    },
+    {
+      "en": "First we need to ask you a few basic questions about your probation to determine what you are eligible for.",
+      "es": "Primero necesitamos hacerle algunas preguntas básicas sobre su libertad condicional para determinar para qué es elegible."
+    },
+    {
+      "en": "Were you sentenced to a period of supervised probation for more than 1 year? If you do not know, you can look it up here.",
+      "es": "¿Fue usted sentenciado a un período de libertad condicional supervisada por más de 1 año? Si no lo sabe, puede consultarlo aquí."
+    },
+    {
+      "en": "Have you been on probation for at least one year?",
+      "es": "¿Ha estado en libertad condicional durante al menos un año?"
+    },
+    {
+      "en": "Are you supervised by the Virginia Department of Corrections (VADOC)? If you answer “yes” to this, this means you are not supervised by a local community-based services agency. Please ask your probation officer if you are not sure about the answer to this question.",
+      "es": "¿Está supervisado por el Departamento Correccional de Virginia (VADOC, por sus siglas en inglés)? Si responde “sí” a esta pregunta, significa que no está supervisado por una agencia local de servicios comunitarios. Por favor pregúntele a su oficial de libertad condicional si no está seguro de la respuesta a esta pregunta."
+    },
+    {
+      "en": "Next we need to ask you some questions about your time on probation. The answers to these questions will determine what you may be eligible for.",
+      "es": "A continuación necesitamos hacerle algunas preguntas sobre su tiempo en libertad condicional. Las respuestas a estas preguntas determinarán para qué puede ser elegible."
+    },
+    {
+      "en": "Have you complied with all court-ordered conditions?",
+      "es": "¿Ha cumplido con todas las condiciones ordenadas por el tribunal?"
+    },
+    {
+      "en": "Have you followed your probation officer’s individual case plan?",
+      "es": "¿Ha seguido el plan de caso individual de su oficial de libertad condicional?"
+    },
+    {
+      "en": "Has your Probation Officer determined that you pose minimal risk to the community?",
+      "es": "¿Su oficial de libertad condicional ha determinado que usted representa un riesgo mínimo para la comunidad?"
+    },
+    {
+      "en": "If you do not know the answer to any of these questions, please discuss them with your probation officer. If you need help reaching your probation officer, please click here.",
+      "es": "Si no sabe la respuesta a alguna de estas preguntas, hable con su oficial de libertad condicional. Si necesita ayuda para comunicarse con su oficial de libertad condicional, haga clic aquí."
+    },
+    {
+      "en": "Next we need to ask you about the nature of your sentence. This helps determine what you may be eligible for.",
+      "es": "A continuación necesitamos preguntarle sobre la naturaleza de su sentencia. Esto ayuda a determinar para qué puede ser elegible."
+    },
+    {
+      "en": "Were you convicted of any of the following offenses?",
+      "es": "¿Fue usted condenado por alguno de los siguientes delitos?"
+    },
+    {
+      "en": "Rape of a child under 13, under section 18.2-61(A)(iii)",
+      "es": "Violación de un menor de 13 años, bajo la sección 18.2-61(A)(iii)"
+    },
+    {
+      "en": "Forcible sodomy, under section 18.2-67.1(A)(1)",
+      "es": "Sodomía forzada, bajo la sección 18.2-67.1(A)(1)"
+    },
+    {
+      "en": "Object sexual penetration, under section 18.2-67.1(A)(1)",
+      "es": "Penetración sexual con objeto, bajo la sección 18.2-67.1(A)(1)"
+    },
+    {
+      "en": "Finally, do you still owe any restitution? This does not include fines, fees, or costs.",
+      "es": "Por último, ¿todavía debe alguna restitución? Esto no incluye multas, tarifas ni costos."
+    },
+    {
+      "en": "You can ask a judge to terminate your probation early! There is no automatic process to make this happen, you will need to file a motion with a court, but this is permitted at any time under Virginia Code 19.2-304.",
+      "es": "¡Puede pedirle a un juez que termine su libertad condicional anticipadamente! No existe un proceso automático para que esto suceda; deberá presentar una moción ante un tribunal, pero esto está permitido en cualquier momento bajo el Código de Virginia 19.2-304."
+    },
+    {
+      "en": "Congratulations, your probation officer is legally required to file for your early termination!",
+      "es": "¡Felicidades, su oficial de libertad condicional está legalmente obligado a presentar su terminación anticipada!"
+    },
+    {
+      "en": "However, this is not the end of the process. At this point, the court is required to hold a hearing and provide notice to you and the prosecutor. At this hearing, the judge has discretion to decide whether or not to grant you early termination. It may be helpful to discuss how to best present your case to the judge with your probation officer or your attorney.",
+      "es": "Sin embargo, esto no es el final del proceso. En este punto, el tribunal debe realizar una audiencia y notificarle a usted y al fiscal. En esta audiencia, el juez tiene la facultad de decidir si le otorga o no la terminación anticipada. Puede ser útil hablar con su oficial de libertad condicional o su abogado sobre cómo presentar mejor su caso ante el juez."
+    },
+    {
+      "en": "However, this is not the end of the process. At this point, the judge has discretion to decide whether or not to grant you early termination, with or without a hearing. It may be helpful to discuss how to best present your case to the judge with your probation officer or your attorney.",
+      "es": "Sin embargo, esto no es el final del proceso. En este punto, el juez tiene la facultad de decidir si le otorga o no la terminación anticipada, con o sin audiencia. Puede ser útil hablar con su oficial de libertad condicional o su abogado sobre cómo presentar mejor su caso ante el juez."
+    },
+    {
+      "en": "Do you know your probation officer’s first and last name? If you are unsure, you can call Virginia DOC at (804) 674-3000.",
+      "es": "¿Sabe el nombre y apellido de su oficial de libertad condicional? Si no está seguro, puede llamar al Departamento Correccional de Virginia (DOC) al (804) 674-3000."
+    },
+    {
+      "en": "If you know their name, you can email your PO and ask them about your case. All probation officer emails in Virginia are their first name, then a period, then their last name @vadoc.virginia.gov. For example, a probation officer named David Johnson would have an email of David.Johnson@vadoc.virginia.gov.",
+      "es": "Si sabe su nombre, puede enviarle un correo electrónico a su oficial de libertad condicional y preguntarle sobre su caso. Todos los correos electrónicos de los oficiales de libertad condicional en Virginia tienen el formato de su nombre, seguido de un punto, seguido de su apellido, @vadoc.virginia.gov. Por ejemplo, un oficial de libertad condicional llamado David Johnson tendría el correo electrónico David.Johnson@vadoc.virginia.gov."
+    },
+    {
+      "en": "Thank you for using REFORM Alliance's Virginia Early Termination Tool!",
+      "es": "¡Gracias por usar la Herramienta de Terminación Anticipada de Libertad Condicional de Virginia de REFORM Alliance!"
+    },
+    {
+      "en": "We hope this tool has been helpful in understanding your potential eligibility for early termination in Virginia.",
+      "es": "Esperamos que esta herramienta le haya sido útil para entender su posible elegibilidad para la terminación anticipada en Virginia."
+    },
+    {
+      "en": "here",
+      "es": "aquí"
+    },
+    {
+      "en": "Yes",
+      "es": "Sí"
+    },
+    {
+      "en": "No",
+      "es": "No"
+    }
+  ]
+}
