@@ -9,6 +9,10 @@
       "es": "Herramienta de Terminación Anticipada de Libertad Condicional de Virginia"
     },
     {
+      "en": ".",
+      "es": "."
+    },
+    {
       "en": "Welcome to REFORM Alliance's Virginia Early Termination Tool.",
       "es": "Bienvenido a la Herramienta de Terminación Anticipada de Libertad Condicional de Virginia de REFORM Alliance."
     },
@@ -123,6 +127,50 @@
     {
       "en": "No",
       "es": "No"
+    },
+        {
+      "en": "Back",
+      "es": "Atrás"
+    },
+    {
+      "en": "Next",
+      "es": "Siguiente"
+    },
+    {
+      "en": "Start",
+      "es": "Comenzar"
+    },
+    {
+      "en": "Finish",
+      "es": "Finalizar"
+    },
+    {
+      "en": "Start Over",
+      "es": "Comenzar de Nuevo"
+    },
+    {
+      "en": "Go Back to Previous Question",
+      "es": "Volver a la Pregunta Anterior"
+    },
+    {
+      "en": "Continue",
+      "es": "Continuar"
+    },
+    {
+      "en": "Missing answer",
+      "es": "Respuesta Faltante"
+    },
+    {
+      "en": "Please select an answer before clicking Next",
+      "es": "Por favor seleccione una respuesta antes de hacer clic en Siguiente"
+    },
+    {
+      "en": "Leaving Application",
+      "es": "Saliendo de la Aplicación"
+    },
+    {
+      "en": "This will take you to a new website",
+      "es": "Esto lo llevará a un nuevo sitio web"
     }
   ]
 }
