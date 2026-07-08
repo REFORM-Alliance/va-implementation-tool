@@ -66,11 +66,13 @@ decision_tree <-
         ),
       question_list = 
         list("q1" = tags$p("Have you complied with all court-ordered conditions?"), 
-             "q2" = tags$p("Have you followed your probation officer’s individual case plan?"), 
-             "q3" = tags$p("Has your Probation Officer determined that you pose minimal risk to the community?"), 
-             "q4" = tags$p(
-               "If you do not know the answer to any of these questions, please discuss them with your probation officer. If you need help reaching your probation officer, please ",
-               actionLink("go_to_resource", "click here"), ".")),
+             "q2" = tags$p("Have you followed your probation officer's individual case plan?"), 
+             "q3" = tags$p("Has your Probation Officer determined that you pose minimal risk to the community?")),
+      note_text =
+        tags$p(
+          "If you do not know the answer to any of these questions, please discuss them with your probation officer. If you need help reaching your probation officer, please ",
+          actionLink("go_to_resource", "click here"), "."
+        ),
       choices = c("Yes", "No"),
       question_id = "eligibility_questions", 
       next_question = list(
@@ -380,29 +382,7 @@ server <- function(input, output, session){
                        choices = lapply(current_question$choices, function(x) i18n_r()$t(x)))
         }
       )
-    }
-    # else if("question" %in% names(current_question) &&
-    #          length(current_question$question_list) > 0){
-    #   tagList(
-    #     translate_ui_recursive(current_question$question, i18n_r),
-    #     current_question %>%
-    #       pluck("question_list") %>%
-    #       enframe() %>%
-    #       unnest(value) %>%
-    #       pmap(
-    #         ~tagList(
-    #           div(tags$div(tags$p(translate_ui_recursive(.y, i18n_r)))), 
-    #           radioButtons(
-    #             inputId = paste0("answer_", .x),
-    #             selected = character(0),
-    #             label = NULL,
-    #             choices = lapply(c("Yes", "No"), function(x) i18n_r()$t(x)) 
-    #           )
-    #         )
-    #       )
-    #   )
-    # }
-    else if("question" %in% names(current_question) &&
+    }else if("question" %in% names(current_question) &&
               length(current_question$question_list) > 0){
       tagList(
         translate_ui_recursive(current_question$question, i18n_r),
@@ -422,7 +402,10 @@ server <- function(input, output, session){
                 choices = lapply(c("Yes", "No"), function(x) i18n_r()$t(x)) 
               )
             )
-          )
+          ),
+        if(!is.null(current_question$note_text)){
+          translate_ui_recursive(current_question$note_text, i18n_r)
+        }
       )
     }else if("result" %in% names(current_question)){
       translate_ui_recursive(current_question$result, i18n_r)
@@ -477,7 +460,8 @@ server <- function(input, output, session){
         stored_answers[[current_question$question_id]] <- english_key_to_store   # <-- new
       }
     }else if(length(current_question$question_list) > 0){
-      answer_ids <- names(input)[grepl("^answer_q", names(input))]
+      # answer_ids <- names(input)[grepl("^answer_q", names(input))]
+      answer_ids <- paste0("answer_", names(current_question$question_list))
       
       responses <- sapply(answer_ids, function(id) get_english_key(input[[id]], current_lang_code))  
       for(id in answer_ids){                                                     # <-- new
@@ -524,7 +508,8 @@ server <- function(input, output, session){
     current_lang_code <- input$selected_language 
     
     if(length(current_question$question_list) > 0){
-      answer_ids <- names(input)[grepl("^answer_q", names(input))]
+      # answer_ids <- names(input)[grepl("^answer_q", names(input))]
+      answer_ids <- paste0("answer_", names(current_question$question_list))
       
       responses <- sapply(answer_ids, function(id) get_english_key(input[[id]], current_lang_code))  
       null_responses <- 
