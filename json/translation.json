@@ -57,8 +57,8 @@
       "es": "¿Su oficial de libertad condicional ha determinado que usted representa un riesgo mínimo para la comunidad?"
     },
     {
-      "en": "If you do not know the answer to any of these questions, please discuss them with your probation officer. If you need help reaching your probation officer, please click here.",
-      "es": "Si no sabe la respuesta a alguna de estas preguntas, hable con su oficial de libertad condicional. Si necesita ayuda para comunicarse con su oficial de libertad condicional, haga clic aquí."
+      "en": "If you do not know the answer to any of these questions, please discuss them with your probation officer. If you need help reaching your probation officer, please",
+      "es": "Si no sabe la respuesta a alguna de estas preguntas, hable con su oficial de libertad condicional. Si necesita ayuda para comunicarse con su oficial de libertad condicional, haga"
     },
     {
       "en": "Next we need to ask you about the nature of your sentence. This helps determine what you may be eligible for.",
@@ -171,6 +171,10 @@
     {
       "en": "This will take you to a new website",
       "es": "Esto lo llevará a un nuevo sitio web"
+    },
+    {
+      "en": "click here",
+      "es": "clic aquí"
     }
   ]
 }

@@ -68,11 +68,18 @@ decision_tree <-
         list("q1" = tags$p("Have you complied with all court-ordered conditions?"), 
              "q2" = tags$p("Have you followed your probation officer's individual case plan?"), 
              "q3" = tags$p("Has your Probation Officer determined that you pose minimal risk to the community?")),
-      note_text =
-        tags$p(
-          "If you do not know the answer to any of these questions, please discuss them with your probation officer. If you need help reaching your probation officer, please ",
-          actionLink("go_to_resource", "click here"), "."
-        ),
+      # note_text =
+      #   tags$p(
+      #     "If you do not know the answer to any of these questions, please discuss them with your probation officer. If you need help reaching your probation officer, please ",
+      #     actionLink("go_to_resource", "click here"), "."
+      #   ),
+      
+      note_text = tags$p(
+        i18n$t("If you do not know the answer to any of these questions, please discuss them with your probation officer. If you need help reaching your probation officer, please"),
+        " ",
+        actionLink("go_to_resource", i18n$t("click here")),
+        "."
+      ),
       choices = c("Yes", "No"),
       question_id = "eligibility_questions", 
       next_question = list(
