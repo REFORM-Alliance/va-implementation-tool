@@ -152,7 +152,8 @@ decision_tree <-
 ####Create App####
 ui <- fluidPage(
   usei18n(i18n),
-  title = uiOutput("app_title"),
+  # title = uiOutput("app_title"),
+  title = "Virginia Early Termination Tool",
   useShinyjs(),
   theme = shinytheme("flatly"),
   tags$head(
