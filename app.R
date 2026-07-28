@@ -45,13 +45,13 @@ decision_tree <-
       question_list = 
         list("q1" = 
                tags$p(
-                 "Were you sentenced to a period of supervised probation for more than 1 year?  If you do not know, you can look it up ",
+                 "Were you sentenced to a period of supervised probation for more than 1 year? If you do not know, you can look it up ",
                  tags$a(href='https://eapps.courts.state.va.us/ocis/landing', target='_blank', class='external-link', "here"),
                  "."
                ),
              "q2" = 
                tags$p("Have you been on probation for at least one year?"),
-             "q3" = tags$p("Are you supervised by the Virginia  Department of Corrections (VADOC)? If you answer “yes” to this, this means you are not supervised by a local community-based services agency. Please ask your probation officer if you are not sure about the answer to this question.")),
+             "q3" = tags$p("Are you supervised by the Virginia Department of Corrections (VADOC)? If you answer “yes” to this, this means you are not supervised by a local community-based services agency. Please ask your probation officer if you are not sure about the answer to this question.")),
       choices = c("Yes", "No"),
       question_id = "initial_questions",
       next_question = list(
@@ -93,13 +93,37 @@ decision_tree <-
           tags$p(strong("Next we need to ask you about the nature of your sentence. This helps determine what you may be eligible for.")),
           tags$p("Were you convicted of any of the following offenses?"), 
           tags$ul(
-            tags$li("Rape of a child under 13, under ", 
-                    tags$a(href='https://law.lis.virginia.gov/vacode/18.2-61/', target='_blank', class='external-link', "section 18.2-61"), 
-                    "(A)(iii)"),
-            tags$li("Forcible sodomy, under ", 
-                    tags$a(href='https://law.lis.virginia.gov/vacode/18.2-67.1/', target='_blank', class='external-link', "section 18.2-67.1(A)(1)")), 
-            tags$li("Object sexual penetration, under ", 
-                    tags$a(href='https://law.lis.virginia.gov/vacode/18.2-67.1/', target='_blank', class='external-link', "section 18.2-67.1(A)(1)"))
+            # tags$li("Rape of a child under 13, under ",
+            #         tags$a(href='https://law.lis.virginia.gov/vacode/18.2-61/', target='_blank', class='external-link', "section 18.2-61"),
+            #         "(A)(iii)"),
+            tags$li(
+              i18n$t("Rape of a child under 13, under "),
+              tags$a(
+                href='https://law.lis.virginia.gov/vacode/18.2-61/',
+                target='_blank',
+                class='external-link',
+                i18n$t("section 18.2-61")
+              ),
+              "(A)(iii)"
+            ),
+            tags$li(
+              i18n$t("Forcible sodomy, under "),
+                    tags$a(
+                      href='https://law.lis.virginia.gov/vacode/18.2-67.1/', 
+                      target='_blank',
+                      class='external-link',
+                      i18n$t("section 18.2-67.1(A)(1)")
+                    )
+              ), 
+            tags$li(
+              i18n$t("Object sexual penetration, under "), 
+                    tags$a(
+                      href='https://law.lis.virginia.gov/vacode/18.2-67.1/', 
+                      target='_blank',
+                      class='external-link',
+                      i18n$t("section 18.2-67.1(A)(1)")
+                    )
+              )
           )
         ),
       choices = c("Yes", "No"),
@@ -170,8 +194,19 @@ ui <- fluidPage(
       .result-text{ font-size: 20px; font-weight: bold; color: #28a745; margin-top: 20px; }
       .shiny-input-container{ margin-bottom: 10px; }
       .btn-container{ margin-top: 20px; }
-      .logo-container{ text-align: center; margin-bottom: 40px; margin-top: 10px;}/* Added margin-top */
+      .logo-container{ text-align: center; margin-bottom: 40px; margin-top: 10px;}
       .logo{ max-width: 200px; height: auto; }
+      
+      .language-picker-container {
+        min-height: 90px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      .language-picker-container .bootstrap-select .dropdown-toggle {
+        white-space: nowrap;
+        min-height: 34px;
+      }
       /* Custom button styling */
       #violation-buttons .btn{
         margin-right: 10px;
@@ -257,7 +292,7 @@ ui <- fluidPage(
     class = "language-picker-container",
     pickerInput(
       inputId = "selected_language",
-      label = i18n$t("Change Language"),
+      label = "Change Language",
       choices = c("en", "es"),
       selected = i18n$get_translation_language(),
       choicesOpt = list(
@@ -342,28 +377,62 @@ server <- function(input, output, session){
     )
   }, ignoreInit = TRUE)
   
-  ##Translate UI Recursive Function
+  # ##Translate UI Recursive Function
+  # translate_ui_recursive <- function(element, translator_reactive){
+  #   if(is.character(element)){
+  #     return(translator_reactive()$t(element))
+  #   }else if(inherits(element, "shiny.tag") || inherits(element, "htmltools.tag")){
+  #     if(element$name == "a" && !is.null(element$children)){
+  #       element$children <- lapply(element$children, translate_ui_recursive, translator_reactive)
+  #     }else if(!is.null(element$children)){
+  #       element$children <- lapply(element$children, translate_ui_recursive, translator_reactive)
+  #     }
+  #     if(!is.null(element$attribs)){
+  #       if(!is.null(element$attribs$placeholder)){
+  #         element$attribs$placeholder <- translator_reactive()$t(element$attribs$placeholder)
+  #       }
+  #       if(element$name %in% c("strong", "b") && !is.null(element$children) && is.character(element$children[[1]])){
+  #         element$children[[1]] <- translator_reactive()$t(element$children[[1]])
+  #       }
+  #     }
+  #     return(element)
+  #   }else if(is.list(element)){
+  #     return(lapply(element, translate_ui_recursive, translator_reactive))
+  #   }
+  #   return(element)
+  # }
+  
   translate_ui_recursive <- function(element, translator_reactive){
+    
     if(is.character(element)){
       return(translator_reactive()$t(element))
-    }else if(inherits(element, "shiny.tag") || inherits(element, "htmltools.tag")){
-      if(element$name == "a" && !is.null(element$children)){
-        element$children <- lapply(element$children, translate_ui_recursive, translator_reactive)
-      }else if(!is.null(element$children)){
-        element$children <- lapply(element$children, translate_ui_recursive, translator_reactive)
-      }
-      if(!is.null(element$attribs)){
-        if(!is.null(element$attribs$placeholder)){
-          element$attribs$placeholder <- translator_reactive()$t(element$attribs$placeholder)
-        }
-        if(element$name %in% c("strong", "b") && !is.null(element$children) && is.character(element$children[[1]])){
-          element$children[[1]] <- translator_reactive()$t(element$children[[1]])
-        }
-      }
-      return(element)
-    }else if(is.list(element)){
-      return(lapply(element, translate_ui_recursive, translator_reactive))
     }
+    
+    if(inherits(element, "shiny.tag") || inherits(element, "htmltools.tag")){
+      
+      if(!is.null(element$children)){
+        element$children <- lapply(
+          element$children,
+          function(child){
+            translate_ui_recursive(child, translator_reactive)
+          }
+        )
+      }
+      
+      return(element)
+    }
+    
+    if(is.list(element)){
+      return(
+        lapply(
+          element,
+          function(child){
+            translate_ui_recursive(child, translator_reactive)
+          }
+        )
+      )
+    }
+    
     return(element)
   }
   
@@ -605,6 +674,24 @@ server <- function(input, output, session){
     finished_page_index <- which(map_chr(decision_tree, "question_id") == "finished_page")
     history(c(history(), finished_page_index))
   })
+  
+  observeEvent(input$selected_language, {
+    current_i18n <- i18n_r()
+    
+    updatePickerInput(
+      session,
+      inputId = "selected_language",
+      label = current_i18n$t("Change Language"),
+      choices = c("en", "es"),
+      selected = input$selected_language,
+      choicesOpt = list(
+        content = c(
+          paste0("<i class='flag-icon flag-icon-us'></i> ", current_i18n$t("English")),
+          paste0("<i class='flag-icon flag-icon-es'></i> ", current_i18n$t("Español"))
+        )
+      )
+    )
+  }, ignoreInit = FALSE)
 }
 
 ##Deploy App

@@ -29,10 +29,6 @@
       "es": "Primero necesitamos hacerle algunas preguntas básicas sobre su libertad condicional para determinar para qué es elegible."
     },
     {
-      "en": "Were you sentenced to a period of supervised probation for more than 1 year? If you do not know, you can look it up here.",
-      "es": "¿Fue usted sentenciado a un período de libertad condicional supervisada por más de 1 año? Si no lo sabe, puede consultarlo aquí."
-    },
-    {
       "en": "Have you been on probation for at least one year?",
       "es": "¿Ha estado en libertad condicional durante al menos un año?"
     },
@@ -69,24 +65,28 @@
       "es": "¿Fue usted condenado por alguno de los siguientes delitos?"
     },
     {
-      "en": "Rape of a child under 13, under section 18.2-61(A)(iii)",
-      "es": "Violación de un menor de 13 años, bajo la sección 18.2-61(A)(iii)"
+      "en": "Rape of a child under 13, under ",
+      "es": "Violación de un menor de 13 años, bajo la"
     },
     {
-      "en": "Forcible sodomy, under section 18.2-67.1(A)(1)",
-      "es": "Sodomía forzada, bajo la sección 18.2-67.1(A)(1)"
+      "en": "Forcible sodomy, under ",
+      "es": "Sodomía forzada, bajo la "
     },
     {
-      "en": "Object sexual penetration, under section 18.2-67.1(A)(1)",
-      "es": "Penetración sexual con objeto, bajo la sección 18.2-67.1(A)(1)"
+      "en": "Object sexual penetration, under section ",
+      "es": "Penetración sexual con objeto, bajo la "
     },
     {
       "en": "Finally, do you still owe any restitution? This does not include fines, fees, or costs.",
       "es": "Por último, ¿todavía debe alguna restitución? Esto no incluye multas, tarifas ni costos."
     },
     {
-      "en": "You can ask a judge to terminate your probation early! There is no automatic process to make this happen, you will need to file a motion with a court, but this is permitted at any time under Virginia Code 19.2-304.",
-      "es": "¡Puede pedirle a un juez que termine su libertad condicional anticipadamente! No existe un proceso automático para que esto suceda; deberá presentar una moción ante un tribunal, pero esto está permitido en cualquier momento bajo el Código de Virginia 19.2-304."
+      "en": "You can ask a judge to terminate your probation early! There is no automatic process to make this happen, you will need to file a motion with a court, but this is permitted at any time under ",
+      "es": "¡Puede pedirle a un juez que termine su libertad condicional anticipadamente! No existe un proceso automático para que esto suceda; deberá presentar una moción ante un tribunal, pero esto está permitido en cualquier momento bajo "
+    },
+    {
+      "en": "Virginia Code 19.2-304", 
+      "es": "el Código de Virginia 19.2-304"
     },
     {
       "en": "Congratulations, your probation officer is legally required to file for your early termination!",
@@ -175,6 +175,34 @@
     {
       "en": "click here",
       "es": "clic aquí"
+    }, 
+    {
+      "en": "Were you sentenced to a period of supervised probation for more than 1 year? If you do not know, you can look it up ",
+      "es": "¿Fue sentenciado(a) a un período de libertad condicional supervisada de más de un año? Si no lo sabe, puede consultarlo "
+    }, 
+    {
+      "en": "Are you supervised by the Virginia Department of Corrections (VADOC)? If you answer \"yes\" to this, this means you are not supervised by a local community-based services agency. Please ask your probation officer if you are not sure about the answer to this question.", 
+      "es": "¿Está bajo la supervisión del Departamento de Correcciones de Virginia (VADOC)? Si responde \"sí\", significa que no está bajo la supervisión de una agencia local de servicios comunitarios. Si no está seguro(a) de la respuesta a esta pregunta, consulte con su oficial de libertad condicional."
+    }, 
+    {
+      "en": "Have you followed your probation officer's individual case plan?", 
+      "es": "¿Ha cumplido con el plan individual de su caso establecido por su oficial de libertad condicional?"
+    }, 
+    {
+      "en": "Change Language", 
+      "es": "Cambiar idioma"
+    }, 
+    {
+      "en": "However, this is not the end of the process. At this pont, the judge has discretion to decide whether or not to grant you early termination, with or without a hearing. It may be helpful to discuss how to best present your case to the judge with your probation officer or your attorney.", 
+      "es": "Sin embargo, este no es el final del proceso. En este momento, el juez tiene la discreción de decidir si le concede o no la terminación anticipada, con o sin una audiencia. Puede ser útil hablar con su oficial de libertad condicional o con su abogado sobre la mejor manera de presentar su caso ante el juez."
+    },
+    {
+      "en": "section 18.2-61", 
+      "es": "sección 18.2-61"
+    },
+    {
+      "en": "section 18.2-67.1(A)(1)", 
+      "es": "sección 18.2-67.1(A)(1)"
     }
   ]
 }
